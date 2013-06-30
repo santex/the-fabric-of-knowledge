@@ -193,7 +193,7 @@ YUI().use('yql', 'node', 'anim', 'dd', 'dd-plugin', 'dd-drop-plugin', 'slider', 
 
                 var url = v,
                     //Create the image and the LI
-                    var name = url.replace("http://santex.github.io/the-fabric-of-knowledge/img/","");
+                    var name = url.replace(/http.*santex.github.io\/the-fabric-of-knowledge\/img\//, '');
                     li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + name + '"><div>'+name+'</div></li>'),
                     //Get the image from the LI
                     img = li.get('firstChild');
