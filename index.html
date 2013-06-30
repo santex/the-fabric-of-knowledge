@@ -168,7 +168,23 @@ YUI().use('yql', 'node', 'anim', 'dd', 'dd-plugin', 'dd-drop-plugin', 'slider', 
     Y.on('windowresize', function() { wrapper.setStyle('height', (wrapper.get('winHeight') - 50 )+ 'px'); });
 
 
-    var photos = [''];
+    var photos = ["http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-1.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-2.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-3.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-4.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-5.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-6.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-7.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-8.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-system.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts-in-reactor-second-level-with-file-system.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts1.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts2.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts3.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts4.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts5.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts6.png",
+"http://santex.github.io/the-fabric-of-knowledge/img/sample-reaction-on-string-(SCIENT).png"];
 
 
 
@@ -177,7 +193,8 @@ YUI().use('yql', 'node', 'anim', 'dd', 'dd-plugin', 'dd-drop-plugin', 'slider', 
 
                 var url = v,
                     //Create the image and the LI
-                    li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + k + '"></li>'),
+                    var name = url.replace("http://santex.github.io/the-fabric-of-knowledge/img/","");
+                    li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + name + '"><div>'+name+'</div></li>'),
                     //Get the image from the LI
                     img = li.get('firstChild');
                 //Append the li to the wrapper
