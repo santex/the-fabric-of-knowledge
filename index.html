@@ -197,7 +197,7 @@ YUI().use('yql', 'node', 'anim', 'dd', 'dd-plugin', 'dd-drop-plugin', 'slider', 
                 var url = v.url,
                     //Create the image and the LI
                     
-                    li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + v.name + '"><div>'+v.name+'</div></li>'),
+                    li = Y.Node.create('<li class="loading"><h2>'+v.name+'</h2><img src="' + url + '" title="' + v.name + '"></li>'),
                     //Get the image from the LI
                     img = li.get('firstChild');
                 //Append the li to the wrapper
