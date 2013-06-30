@@ -168,33 +168,34 @@ YUI().use('yql', 'node', 'anim', 'dd', 'dd-plugin', 'dd-drop-plugin', 'slider', 
     Y.on('windowresize', function() { wrapper.setStyle('height', (wrapper.get('winHeight') - 50 )+ 'px'); });
 
 
-    var photos = ["http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-1.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-2.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-3.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-4.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-5.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-6.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-7.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-8.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-system.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts-in-reactor-second-level-with-file-system.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts1.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts2.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts3.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts4.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts5.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts6.png",
-"http://santex.github.io/the-fabric-of-knowledge/img/sample-reaction-on-string-(SCIENT).png"];
+    var photos = [
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-1.png",name:"knowledge-reaction1"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-2.png",name:"knowledge-reaction2"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-3.png",name:"knowledge-reaction3"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-4.png",name:"knowledge-reaction4"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-5.png",name:"knowledge-reaction5"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-6.png",name:"knowledge-reaction6"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-7.png",name:"knowledge-reaction7"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-reaction-8.png",name:"knowledge-reaction8"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/knowledge-system.png",name:"full-knowledge-system"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts-in-reactor-second-level-with-file-system.png",name:"concepts-in-reactor-second-cycle-with-file-system matches"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts1.png",name:"random-concepts1"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts2.png",name:"random-concepts2"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts3.png",name:"random-concepts3"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts4.png",name:"random-concepts4"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts5.png",name:"random-concepts5"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/random-concepts6.png",name:"random-concepts6"},
+{url:"http://santex.github.io/the-fabric-of-knowledge/img/sample-reaction-on-string-(SCIENT).png",name:"sample-reaction-on-string-(SCIENT)"}];
 
 
 
             Y.each(photos, function(v, k) {
                 //Create our URL
 
-                var url = v,
+                var url = v.url,
                     //Create the image and the LI
                     
-                    li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + url + '"><div>'+url+'</div></li>'),
+                    li = Y.Node.create('<li class="loading"><img src="' + url + '" title="' + v.name + '"><div>'+v.name+'</div></li>'),
                     //Get the image from the LI
                     img = li.get('firstChild');
                 //Append the li to the wrapper
